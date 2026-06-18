@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://alpha.energy/sitemap.xml
