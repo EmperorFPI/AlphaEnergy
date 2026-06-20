@@ -26,7 +26,7 @@ framework — plain HTML/CSS/JS, deployable as-is.
 ├── assets/
 │   ├── styles.css             Shared brand stylesheet
 │   ├── app.js                 Mobile nav toggle + footer year
-│   └── alpha-logo.png         Alpha Energy mark
+│   └── alpha-logo.jpg         Alpha Energy mark
 ├── .htaccess                  Custom 404 + security headers (Apache/Plesk)
 ├── robots.txt
 └── sitemap.xml
