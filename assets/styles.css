@@ -51,6 +51,8 @@ img{max-width:100%;display:block;}
 .hero .lede{font-size:clamp(17px,2vw,21px);color:var(--text-body);max-width:62ch;margin-top:24px;font-weight:400;}
 .hero-tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:34px;}
 .tag{border:1px solid var(--border);padding:6px 16px;font-family:'Inter',sans-serif;font-size:12px;font-weight:500;letter-spacing:1px;text-transform:uppercase;color:var(--blue-light);border-radius:0;}
+.tag-link{display:inline-block;text-decoration:none;cursor:pointer;border-color:var(--blue-light);transition:background .2s,color .2s,border-color .2s;}
+.tag-link:hover{background:var(--blue-light);color:#fff;border-color:var(--blue-light);}
 
 /* ── SECTIONS ── */
 .section{padding:72px 32px;}
