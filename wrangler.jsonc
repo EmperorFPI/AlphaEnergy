@@ -1,0 +1,23 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "alpha-energy",
+  "compatibility_date": "2026-07-26",
+
+  // Static-assets-only Worker: no "main" script. Cloudflare serves the files
+  // in this repo directly from its edge network.
+  "assets": {
+    // Everything in public/ is published; nothing outside it is.
+    "directory": "./public",
+
+    // "/" -> /index.html, "/about" -> /about.html.
+    // Existing "/about.html" links still work (307 -> "/about").
+    "html_handling": "auto-trailing-slash",
+
+    // Replaces the .htaccess "ErrorDocument 404 /404.html".
+    "not_found_handling": "404-page"
+  },
+
+  "observability": {
+    "enabled": true
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "alpha-energy",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Alpha Energy corporate website — static site served by a Cloudflare Worker",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "tail": "wrangler tail"
+  },
+  "devDependencies": {
+    "wrangler": "^4.114.0"
+  }
+}

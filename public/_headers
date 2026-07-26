@@ -1,0 +1,16 @@
+# Response headers for static assets — the Workers equivalent of the
+# mod_headers block in .htaccess. This file is parsed by Cloudflare and is
+# never served itself.
+
+/*
+  X-Frame-Options: SAMEORIGIN
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=()
+
+# Asset filenames are not content-hashed, so keep the browser TTL short enough
+# that a CSS/JS edit goes live the same hour. Cloudflare's edge cache absorbs
+# the traffic regardless. Do not add a second, more specific /assets/video/*
+# rule: matching rules are appended, producing a doubled Cache-Control value.
+/assets/*
+  Cache-Control: public, max-age=3600
